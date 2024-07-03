@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8000; // Default port 8000 if PORT is not defin
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://tic-tac-toe-multiplayer-client-smoky.vercel.app",
   },
 });
 

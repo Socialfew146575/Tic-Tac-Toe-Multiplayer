@@ -228,7 +228,7 @@ const App = () => {
 
 
 
-        const newSocket = io("http://localhost:8000", {
+        const newSocket = io("https://tic-tac-toe-multiplayer-server-sepia.vercel.app", {
             autoConnect: true
         });
 

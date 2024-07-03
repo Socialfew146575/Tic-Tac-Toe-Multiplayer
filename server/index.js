@@ -1,10 +1,12 @@
 require("dotenv").config();
+const express = require("express");
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
 const PORT = process.env.PORT || 8000; // Default port 8000 if PORT is not defined in .env
 
-const httpServer = createServer();
+const app = express(); // Create an instance of Express
+const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
     origin: "https://tic-tac-toe-multiplayer-client-smoky.vercel.app",
@@ -94,6 +96,11 @@ io.on("connection", (socket) => {
       }
     });
   });
+});
+
+// Define a route to send some text on the '/' page
+app.get("/", (req, res) => {
+  res.send("Welcome to the Tic-Tac-Toe Multiplayer Server!");
 });
 
 httpServer.listen(PORT, () => {

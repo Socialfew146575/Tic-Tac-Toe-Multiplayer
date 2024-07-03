@@ -233,7 +233,6 @@ const App = () => {
 
 
         const newSocket = io("https://tic-tac-toe-multiplayer-server-sepia.vercel.app", {
-            autoConnect: true,
             transports: ['websocket']
 
         });

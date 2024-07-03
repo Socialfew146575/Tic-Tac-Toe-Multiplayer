@@ -141,8 +141,8 @@ const App = () => {
         setOpponentName(null)
         setWinner(null)
         setWinngBoxes([])
-        setGameState(prev=>{
-            
+        setGameState(prev => {
+
             const copyState = [
 
                 ['', '', '',],
@@ -182,7 +182,7 @@ const App = () => {
         const col = data.col;
         const turn = data.turn
 
-        
+
         setGameState(prev => {
             const copyState = [...prev];
             copyState[row][col] = turn;
@@ -233,7 +233,9 @@ const App = () => {
 
 
         const newSocket = io("https://tic-tac-toe-multiplayer-server-sepia.vercel.app", {
-            autoConnect: true
+            autoConnect: true,
+            transports: ['websocket']
+
         });
 
         socket.current = newSocket;
@@ -317,9 +319,9 @@ const App = () => {
 
             <div className='flex flex-col  items-center justify-center gap-4'>
 
-                    
+
                 {myShape && <>
-                    
+
                     <div className='flex justify-center items-center w-full font-bold text-xl'>
                         You are Playing as&nbsp;&nbsp;
                         <span className={`${myShape === 'circle' ? "text-[#3FA7F2]" : "text-[#DE7EA1]"} text-4xl`}>
@@ -328,10 +330,10 @@ const App = () => {
 
 
                     </div>
-                
+
                 </>}
-                
-                 <div className='flex justify-between items-center w-full'>
+
+                <div className='flex justify-between items-center w-full'>
 
                     <div className={` ${(currentPlayer === myShape) ? (myShape === "circle") ? "bg-[#3FA7F2]" : "bg-[#DE7EA1]" : "bg-[#4b495f]"} font-[seriff] text-base flex items-center justify-center h-8 w-24  rounded-3xl rounded-tl-none rounded-br-none translate-x-[-15]`}>
                         You

@@ -191,6 +191,10 @@ const App = () => {
 
     })
 
+    socket.current?.on("connect_error", (err) => {
+        console.log("Connection Error: ", err.message);
+    });
+
     socket.current?.on("connect", () => {
         setPlayOnline(true);
 

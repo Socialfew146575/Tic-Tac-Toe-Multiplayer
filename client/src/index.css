@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply bg-[#1f1f2f];
+}
+
+.opponentTurnPointer{
+
+  cursor: not-allowed !important;
+
+}

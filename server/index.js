@@ -1,5 +1,8 @@
+require('dotenv').config()
 const { createServer } = require("http");
 const { Server } = require("socket.io");
+
+const PORT = process.env.PORT
 
 const httpServer = createServer();
 const io = new Server(httpServer, {
@@ -103,6 +106,6 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(8000, () => {
-  console.log("Server running on port 8000");
+httpServer.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

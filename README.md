@@ -18,8 +18,7 @@ This is a real-time multiplayer Tic-Tac-Toe game built using React, Node.js, and
 
 
 
-
-                                                https://github.com/Socialfew146575/Tic-Tac-Toe-Multiplayer/assets/95147819/b10daba9-0fe1-4120-8592-29107eb085f9
+https://github.com/Socialfew146575/Tic-Tac-Toe-Multiplayer/assets/95147819/b10daba9-0fe1-4120-8592-29107eb085f9
 
 
 

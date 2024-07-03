@@ -9,10 +9,15 @@ const app = express(); // Create an instance of Express
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: ["https://tic-tac-toe-multiplayer-client-smoky.vercel.app"],
+    origin: [
+      "https://tic-tac-toe-multiplayer-client-smoky.vercel.app",
+      "https://tic-tac-toe-multiplayer-server-sepia.vercel.app",
+    ],
     methods: ["GET", "POST"],
   },
 });
+
+
 
 
 const PLAYERS_PER_GAME = 2;
